@@ -1,0 +1,77 @@
+.circuit-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circuit-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9); /* чуть затемнить для контраста */
+  display: block;
+}
+
+.circuit-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Ключевое: сохраняем соотношение сторон */
+ 
+}
+
+
+
+
+
+.no-motion .current-path {
+  animation: none;
+  stroke-dashoffset: 0;
+  opacity: 0.6;
+}
+
+
+
+.spark-dot {
+  offset-distance: 0%;
+  animation: 
+    flow  5s   linear infinite,
+    pulse 0.8s ease-in-out infinite alternate;
+    
+}
+
+.spark-one {
+  offset-path: path("M 5 724 L 44 712 L 102 675 L 240 631 L 384 597 L 345 568 L 470 517 L 608 486 L 693 463");
+}
+
+.spark-two {
+  offset-path: path("M 1915 760 L 1827 733 L 1722 652 L 1645 637 L 1558 594 L 1450 577 L 1398 538 L 1347 526 L 1288 484 L 1144 442");
+}
+
+
+@keyframes flow {
+  0%   { 
+    offset-distance: 0%; 
+    opacity: 1; 
+    r: 6;               /* начальный радиус (можно через attr(r) или var) */
+  }
+  75%  { 
+    offset-distance: 75%; 
+    opacity: 0.9; 
+    r: 5; 
+  }
+  100% { 
+    offset-distance: 100%; 
+    opacity: 0; 
+    r: 2;               /* сжимается в точку */
+  }
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
