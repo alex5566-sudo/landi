@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+.hologram {
+  
+  background:rgba(0, 140, 255, 0.1);
+  border: 2px solid rgba(100, 220, 255, 0.5);
+  border-radius: 28px;
+  backdrop-filter: blur(14px);
+  box-shadow: 
+    0 0 70px rgba(0, 200, 255, 0.7),
+    0 0 140px rgba(0, 140, 255, 0.4),
+    inset 0 0 50px rgba(0, 140, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  opacity: 0.7;
+  
+}
+
+

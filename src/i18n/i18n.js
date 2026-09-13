@@ -1,0 +1,23 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+import ru from "../locales/ru.json";
+import ua from "../locales/ua.json";
+import en from "../locales/en.json";
+
+i18n.use(initReactI18next).init({
+    resources:{
+        ru:{translation:ru},
+        ua:{translation:ua},
+        en:{translation:en}
+    },
+
+    fallbackLng:"en",
+    lng:"ru",
+
+    interpolation:{
+        escapeValue:false
+    }
+});
+
+export default i18n;
