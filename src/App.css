@@ -60,4 +60,30 @@
   
 }
 
+/* ================================= */
+/* Общий слой фонового изображения */
+/* ================================= */
 
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* ================================= */
+/* ФОН №2 */
+/* ================================= */
+
+.background2-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.background2-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
