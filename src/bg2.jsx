@@ -3,7 +3,7 @@ const Background2 = () => {
     <div className="background2-container">
 
       <img
-        src="/bg2.webp"
+        src={`${import.meta.env.BASE_URL}bg2.webp`}
         alt=""
         className="background2-image"
       />

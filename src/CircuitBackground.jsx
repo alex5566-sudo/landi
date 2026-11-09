@@ -10,7 +10,7 @@ const CircuitBackground = () => {
     <div className="circuit-container">
       {/* Фон — картинка */}
       <img 
-        src="/circuit-bg.webp" 
+        src={`${import.meta.env.BASE_URL}circuit-bg.webp`} 
         alt="Circuit board background"
         className="circuit-bg"
       />

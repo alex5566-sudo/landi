@@ -155,19 +155,19 @@ function App() {
                 <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                    {[ { 
                         text: "Все понравилось, обратимся еще", 
-                        image: "/client1.jpg" 
+                        image:`${import.meta.env.BASE_URL}client1.jpg` 
                       }, 
                       { 
                         text: "Было мало попкорна", 
-                        image: "/client2.jpg" 
+                        image: `${import.meta.env.BASE_URL}client2.jpg` 
                       }, 
                       { 
                         text: "Я так ничего и не понял", 
-                        image: "/client3.jpg" 
+                        image: `${import.meta.env.BASE_URL}client3.jpg`
                       }, 
                       { 
                         text: "Профессионально! Рекомендую", 
-                        image: "/client4.jpg" 
+                        image: `${import.meta.env.BASE_URL}client4.jpg` 
                       } ].map((review, i) => ( 
                       
                             <div key={i} className="cardreview backdrop-blur-lg rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-3 border border-white/20 flex flex-col items-center" > 
